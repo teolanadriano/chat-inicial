@@ -48,7 +48,8 @@ def verificar(mensagem):
 
 @bot.message_handler(func=verificar)
 def responder(mensagem):
-    msg = '''
+    msg = f'''
+    Olá, {mensagem.from_user.first_name}!
     Digite "/calcular" e a sentença para resolver.
     '''
     bot.reply_to(mensagem, msg)
